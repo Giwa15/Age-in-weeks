@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life in weeks</title>
+</head>
+<body>
+
+    <p id="life"></p>
+
+
+    <button onclick="getAge()"> Click to Know how long you have left if you 
+        lived up to 90 years.
+    </button>
+
+    <script>
+    function lifeInWeeks(age) {
+
+        var day = (90 - age) * 365;
+        var weeks = (90 - age) * 52;
+        var months = (90 - age) * 12;
+  
+        document.getElementById("life").innerHTML = 
+           "You have " + day + " days, " +  weeks + " weeks, and "   + months + " months left.";
+  
+        
+  }
+  
+  
+  function getAge() {
+
+
+        var age = prompt("How old are you? ");
+
+        if (age && !isNaN(age)  && age >=0 && age <= 90) {
+
+            lifeInWeeks(age);
+
+        }else {
+
+            alert("Please enter a valid age between 0 and 90");
+        }
+
+  }
+  
+      
+
+
+    </script>
+</body>
+</html>
